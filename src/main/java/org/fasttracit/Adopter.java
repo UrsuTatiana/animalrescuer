@@ -1,7 +1,7 @@
 package org.fasttracit;
 
-public class Adopter {
-    String name;
+public class Adopter extends Person {
+
     double availableAmount;
 
 }
