@@ -6,8 +6,8 @@ public class App
 {
     public static void main( String[] args ) {
 
-        Animal animal1 = new Animal();
-        animal1.name = "Dog";
+        Animal animal1 = new Animal("BOB", 2,1,5,5,"Wiskas", "Bal game");
+        animal1.name = " Bob";
         animal1.age = 2;
         animal1.favoriteFood = "Brit";
         animal1.favoriteRecreationActivity = "Ball game";
@@ -21,7 +21,7 @@ public class App
         System.out.println("his favorite recreation activity  is: " + animal1.favoriteRecreationActivity);
 
 
-        Adopter adopter1 = new Adopter();
+        Adopter adopter1 = new Adopter("John", 25, 100);
         adopter1.name = "John";
         adopter1.availableAmount = 1000;
 
@@ -33,23 +33,27 @@ public class App
 
 
         RecreationActivity recreationActivity1 = new RecreationActivity();
-        recreationActivity1.name = "Ball game";
+        recreationActivity1.name = "running";
 
 
-        Veterinarian veterinarian1 = new Veterinarian();
+        Veterinarian veterinarian1 = new Veterinarian("Mike", 30);
         veterinarian1.name = "Mike";
 
+        System.out.println("====================================");
 
+        System.out.println(animal1.levelOfFeelingHungry);
+        adopter1.feedTheAnimal(animal1, petFood1);
+        System.out.println(animal1.levelOfFeelingHungry);
 
+        System.out.println("+++++++++++++++++++");
 
+        System.out.println(animal1.moodLevel);
+        adopter1.recreateTheAnimal(adopter1,recreationActivity1,animal1 );
+        System.out.println(animal1.moodLevel);
 
-
-
-
-
-
-
-
+        System.out.println(animal1.levelOfFeelingHungry);
+        adopter1.feedTheAnimal(animal1,petFood1);
+        System.out.println(animal1.levelOfFeelingHungry);
 
 
     }
